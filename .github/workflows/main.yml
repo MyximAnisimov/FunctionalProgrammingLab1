@@ -34,8 +34,5 @@ jobs:
           ghc-version: 9.4.8
           cabal-version: 3.10.2.0
           
-      - name: Install HUnit
-        run: cabal install HUnit
-      
       - name: Run tests
         run: cabal test
