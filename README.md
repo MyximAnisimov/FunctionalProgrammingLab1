@@ -74,7 +74,24 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
 - вертикально (те же самые функции, что и для горизонтального обхода, только матрица транспонируется при помощи функции `transponateMatrix`)
 - горизонатльно правой нижней диагональю (`findDiagonalRow1` - поиск максимума среди всех строк, `findDiagonalCol1` - нахождение максимума в каждых четырёх строках, `findMultipleEl` - проход по четырём строчкам)
 - горизонтально правой верхней диагональю (`findDiagonalRow2`, `findDiagonalCol2`, `findMultipleEl`)
+
 В конце среди всех четырёх обходов ищется максимальный ответ при помощи функции `findResult`
+
+В модульной реализации программа так же проходится по матрице всеми 4 способами, но в модуле [Task11_ModuleGenerateSub.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task11_ModuleGenerateSub.hs) осуществляется генерация последовательности максимальных чисел после каждого из проходов, а затем в модуле [Task11_ModuleMakeCon.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task11_ModuleMakeCon.hs) осуществляется свёртка всех последовательностей и поиск максимальных чисел
+
+Решение данной проблемы на Джава:
+
+Решение 20-ой проблемы представлено в 5 вариантах:
+* рекурсия - функции `factorialFunc` и `countFactSum` в модуле [Task20_Recursions.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_Recursions.hs)
+* хвостовая рекурсия - функции `factorialTailFunc`, `factorialTailFuncInner`, `countTailFactSum`, `countSumInner` в модуле [Task20_Recursions.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_Recursions.hs)
+* модульная реализация с использованием генерации последовательности в модуле [Task20_ModuleGenerateSub.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_ModuleGenerateSub.hs), и свёртки в модуле [Task20_ModuleMakeCon.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_ModuleMakeCon.hs)
+* с генерацией последовательности при помощи map в модуле [Task20_GenerateSubsequenceByMap](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_GenerateSubsequenceByMap.hs)
+* с генерацией бесконечной последовательности в модуле [Task20_GenerateEndlessSubsequence.hs](https://github.com/MyximAnisimov/FunctionalProgrammingLab1/blob/main/src/Task20_GenerateEndlessSubsequence.hs)
+
+Решение проблемы на Джава:
+
+
+
 
 
 
