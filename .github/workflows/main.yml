@@ -21,4 +21,4 @@ jobs:
       - name: Install hlint
         run: cabal install hlint
       - name: Run hlint
-        run: hlint
+        run: hlint .
