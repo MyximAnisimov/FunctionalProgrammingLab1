@@ -1,0 +1,4 @@
+Test suite untitledHS-test: RUNNING...
+Cases: 6  Tried: 0  Errors: 0  Failures: 0Cases: 6  Tried: 1  Errors: 0  Failures: 0Cases: 6  Tried: 2  Errors: 0  Failures: 0Cases: 6  Tried: 3  Errors: 0  Failures: 0Cases: 6  Tried: 4  Errors: 0  Failures: 0Cases: 6  Tried: 5  Errors: 0  Failures: 0                                          Cases: 6  Tried: 6  Errors: 0  Failures: 0
+Test suite untitledHS-test: PASS
+Test suite logged to: C:\Users\1\untitledHS\dist-newstyle\build\x86_64-windows\ghc-9.4.8\untitledHS-0.1.0.0\t\untitledHS-test\test\untitledHS-0.1.0.0-untitledHS-test.log
