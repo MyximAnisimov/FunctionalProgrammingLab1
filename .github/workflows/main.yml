@@ -35,4 +35,4 @@ jobs:
       - name: Install HUnit
       - run: cabal install HUnit
       - name: Run tests
-        run: cabal test
+      - run: cabal test
