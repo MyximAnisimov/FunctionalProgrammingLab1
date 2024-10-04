@@ -102,6 +102,8 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
 
 Решение данной проблемы на Джава:
 
+```
+
 public class Main {
     public static void main(String[] args) {
         int[][] startMatrix = {
@@ -170,6 +172,7 @@ Math.max(maxHorizontal, maxDiagonal2), Math.max(maxVertical,
  maxDiagonal1)));
     }
 }
+```
 
 Решение 20-ой проблемы представлено в 5 вариантах:
 
@@ -183,6 +186,8 @@ Math.max(maxHorizontal, maxDiagonal2), Math.max(maxVertical,
     * с генерацией бесконечной последовательности в модуле `Task20_GenerateEndlessSubsequence.hs`
 
 Решение проблемы на Джава:
+
+```
 
 import java.math.BigInteger;
 
@@ -200,4 +205,6 @@ public class Main {
         System.out.println(result);
     }
 }
+
+```
 
