@@ -199,7 +199,7 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
 * хвостовая рекурсия - функции `factorialTailFunc`,  `factorialTailFuncInner`,
     `countTailFactSum`, `countSumInner` в модуле `Task20_Recursions.hs`
 * модульная реализация с использованием генерации
-    последовательности в модуле 
+    последовательности в модуле
     `Task20_ModuleGenerateSub.hs`,
     и свёртки в модуле `Task20_ModuleMakeCon.hs`
 * с генерацией последовательности при помощи map в модуле  
