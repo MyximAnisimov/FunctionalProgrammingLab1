@@ -102,8 +102,6 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
 
 Решение данной проблемы на Джава:
 
-```java
-
 public class Main {
     public static void main(String[] args) {
         int[][] startMatrix = {
@@ -173,20 +171,18 @@ Math.max(maxHorizontal, maxDiagonal2), Math.max(maxVertical,
     }
 }
 
-```
-
 Решение 20-ой проблемы представлено в 5 вариантах:
 
     * рекурсия - функции `factorialFunc` и `countFactSum` в модуле `Task20_Recursions.hs`
-    * хвостовая рекурсия - функции `factorialTailFunc`, `factorialTailFuncInner`, `countTailFactSum`, `countSumInner` в модуле `Task20_Recursions.hs`
-    * модульная реализация с использованием генерации последовательности в модуле `Task20_ModuleGenerateSub.hs`, 
+    * хвостовая рекурсия - функции `factorialTailFunc`, `factorialTailFuncInner`, 
+    `countTailFactSum`, `countSumInner` в модуле `Task20_Recursions.hs`
+    * модульная реализация с использованием генерации 
+    последовательности в модуле `Task20_ModuleGenerateSub.hs`, 
     и свёртки в модуле `Task20_ModuleMakeCon.hs`
     * с генерацией последовательности при помощи map в модуле `Task20_GenerateSubsequenceByMap`
     * с генерацией бесконечной последовательности в модуле `Task20_GenerateEndlessSubsequence.hs`
 
 Решение проблемы на Джава:
-
-```java
 
 import java.math.BigInteger;
 
@@ -205,4 +201,3 @@ public class Main {
     }
 }
 
-```
