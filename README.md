@@ -88,20 +88,22 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
     * горизонтально правой верхней диагональю 
     (`findDiagonalRow2`, `findDiagonalCol2`, `findMultipleEl`)
 
-В конце среди всех четырёх обходов ищется максимальный ответ при помощи  функции `findResult`
+В конце среди всех четырёх обходов ищется максимальный ответ
+при помощи  функции `findResult`
 
 В модульной реализации программа так же проходится по матрице всеми 4
  способами,
 но в модуле `Task11_ModuleGenerateSub.hs` осуществляется
 генерация последовательности максимальных чисел
 после каждого из проходов,
-затем в модуле `Task11_ModuleMakeCon.hs` 
+затем в модуле `Task11_ModuleMakeCon.hs`
 осуществляется свёртка всех последовательностей
 и поиск максимальных чисел
 
 Решение данной проблемы на Джава:
 
 ```java
+
 public class Main {
     public static void main(String[] args) {
         int[][] startMatrix = {
@@ -132,7 +134,8 @@ public class Main {
         for(int i=0; i<startMatrix.length; i++){
             for(int j=0; j<startMatrix[i].length; j++){
                 if(j+3 < startMatrix[i].length){
-                    maxHorizontal = Math.max(maxHorizontal, startMatrix[i][j] * startMatrix[i][j+1] * startMatrix[i][j+2] * startMatrix[i][j+3]);
+                    maxHorizontal = Math.max(maxHorizontal, startMatrix[i][j]
+ * startMatrix[i][j+1] * startMatrix[i][j+2] * startMatrix[i][j+3]);
                 }
                 else break;
             }
@@ -140,7 +143,8 @@ public class Main {
         for(int i=0; i<startMatrix[0].length; i++){
             for(int j=0; j<startMatrix.length; j++){
                 if(j+3 < startMatrix[0].length){
-                    maxVertical = Math.max(maxVertical, startMatrix[j][i] * startMatrix[j+1][i] * startMatrix[j+2][i] * startMatrix[j+3][i]);
+                    maxVertical = Math.max(maxVertical, startMatrix[j][i]
+* startMatrix[j+1][i] * startMatrix[j+2][i] * startMatrix[j+3][i]);
                 }
                 else break;
             }
@@ -148,7 +152,8 @@ public class Main {
         for(int i=0; i<startMatrix.length; i++){
             for(int j=0; j<startMatrix[i].length; j++){
                 if(j + 3 < startMatrix[i].length && i + 3 < startMatrix.length){
-                    maxDiagonal1 = Math.max(maxDiagonal1, startMatrix[i][j] * startMatrix[i+1][j+1] * startMatrix[i+2][j+2] * startMatrix[i+3][j+3]);
+                    maxDiagonal1 = Math.max(maxDiagonal1, startMatrix[i][j]
+ * startMatrix[i+1][j+1] * startMatrix[i+2][j+2] * startMatrix[i+3][j+3]);
                 }
                 else break;
             }
@@ -156,14 +161,18 @@ public class Main {
         for(int i=0; i<startMatrix.length; i++){
             for(int j=0; j<startMatrix[i].length; j++){
                 if(j + 3 < startMatrix[i].length && i + 3 < startMatrix.length){
-                    maxDiagonal2 = Math.max(maxDiagonal2, startMatrix[i+3][j] * startMatrix[i+2][j+1] * startMatrix[i+1][j+2] * startMatrix[i][j+3]);
+                    maxDiagonal2 = Math.max(maxDiagonal2, startMatrix[i+3][j]
+ * startMatrix[i+2][j+1] * startMatrix[i+1][j+2] * startMatrix[i][j+3]);
                 }
                 else break;
             }
         }
-        System.out.println(Math.max(Math.max(maxHorizontal, maxDiagonal2), Math.max(maxVertical, maxDiagonal1)));
+        System.out.println(Math.max(
+Math.max(maxHorizontal, maxDiagonal2), Math.max(maxVertical,
+ maxDiagonal1)));
     }
 }
+
 ```
 
 Решение 20-ой проблемы представлено в 5 вариантах:
@@ -178,6 +187,7 @@ public class Main {
 Решение проблемы на Джава:
 
 ```java
+
 import java.math.BigInteger;
 
 public class Main {
@@ -194,4 +204,5 @@ public class Main {
         System.out.println(result);
     }
 }
+
 ```
