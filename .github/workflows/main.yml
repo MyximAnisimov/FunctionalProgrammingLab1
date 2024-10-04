@@ -22,9 +22,16 @@ jobs:
         run: cabal install hlint
       - name: Run hlint
         run: hlint .
-        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: haskell/actions/setup@v1
+        with:
+          ghc-version: 9.4.8
+          cabal-version: 3.10.2.0
       - name: Install HUnit
       - run: cabal install HUnit
-      
       - name: Run tests
         run: cabal test
