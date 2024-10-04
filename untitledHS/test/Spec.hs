@@ -2,37 +2,27 @@ module Main where
 
 import           System.Exit
 import           Task11_ModuleMakeCon              (convolution)
-import           Task11_Recursions                 (findMaxMatrix)
 import           Task20_GenerateEndlessSubsequence (generateEndlessSubsequence)
-import           Task20_ModuleMakeCon              (generateSeqNums)
 import           Task20_Recursions                 (countFactSum,
                                                     countTailFactSum)
 import           Test.HUnit
 
 import           Data.Type.Coercion                (TestCoercion)
 import qualified System.Exit                       as Exit
-import           System.Exit                       (exitFailure, exitSuccess)
 import           Task11_Recursions                 (findMaxMatrix)
 import           Task20_GenerateSubsequenceByMap   (generateByMap)
 import           Task20_ModuleMakeCon              (generateSeqNums)
-testTailRecFunc = TestCase (assertEqual "Check the tail recursion solution of 20th task" 648 (countTailFactSum "9332621544394415268169923885
-6266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"))
+testTailRecFunc = TestCase (assertEqual "Check the tail recursion solution of 20th task" 648 (countTailFactSum "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"))
 
-testRecFunc = TestCase (assertEqual "Check the stadart recursion solution of 20th task" 648 (countFactSum "933262154439441526816992388562667
-00490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"))
+testRecFunc = TestCase (assertEqual "Check the stadart recursion solution of 20th task" 648 (countFactSum "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"))
 
-testModuleRealization = TestCase (assertEqual "Check the module realization solution of 20th task" 648 (generateSeqNums "9332621544394415268
-1699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"
-))
+testModuleRealization = TestCase (assertEqual "Check the module realization solution of 20th task" 648 (generateSeqNums "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000"))
 
 testGenerationByMap = TestCase (assertEqual "Check the generation by map" [1..100] (generateByMap 100))
 
-testEndlessGeneration = TestCase (assertEqual "Check the generation of a list by endless sequence" 93326215443944152681699238856266700490715
-96826438162146859296389521759999322991560894146397615651828625369792082722375825118521091686400000000000000000000000000 (generateEndlessSubs
-equence [1..] 0))
+testEndlessGeneration = TestCase (assertEqual "Check the generation of a list by endless sequence" 9332621544394415268169923885626670049071596826438162146859296389521759999322991560894146397615651828625369792082722375825118521091686400000000000000000000000000 (generateEndlessSubsequence [1..] 0))
 
-testSearchMaxinHV = TestCase (assertEqual "Check the max element from horizontal lines subsequence in 11th task" 48477312 (findMaxMatrix [[0
-8, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08],
+testSearchMaxinHV = TestCase (assertEqual "Check the max element from horizontal lines subsequence in 11th task" 48477312 (findMaxMatrix [[08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08],
                 [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00],
                 [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65],
                 [52, 70, 95, 23, 04, 60, 11, 42, 69, 24, 68, 56, 01, 32, 56, 71, 37, 02, 36, 91],

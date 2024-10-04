@@ -7,7 +7,7 @@ where
     --Генерация последовательности максимальных чисел
 generateHVLists :: [[Integer]] -> [Integer] -> [Integer]
 generateHVLists [] result     = result
-generateHVLists (x:xs) result = generateHVLists xs (generateHVLists' x result)
+generateHVLists (x:xs) result = foldl (flip generateHVLists') result xs
 
 generateHVLists' :: [Integer] -> [Integer] -> [Integer]
 generateHVLists' [] result = result
@@ -24,7 +24,7 @@ generateDiagLists' :: [[Integer]] -> [Integer] -> Int -> Int -> [Integer]
 generateDiagLists' [] result _ _ = result
 generateDiagLists' xs result row col =
                                             if row + 3 < length xs && col + 3 < length (xs !! row)
-                                                then [((xs !! row) !! col) * ((xs !! (row + 1)) !! (col + 1)) * ((xs !! (row + 2)) !! (col + 2)) * ((xs !! (row + 3)) !! (col + 3))] ++ generateDiagLists' xs result row (col + 1)
+                                                then (((xs !! row) !! col) * ((xs !! (row + 1)) !! (col + 1)) * ((xs !! (row + 2)) !! (col + 2)) * ((xs !! (row + 3)) !! (col + 3))) : generateDiagLists' xs result row (col + 1)
                                             else result
 
 generateDiagLists2 :: [[Integer]] -> [Integer] -> Int -> Int -> [Integer]
@@ -37,5 +37,5 @@ generateDiagLists2' :: [[Integer]] -> [Integer] -> Int -> Int -> [Integer]
 generateDiagLists2' [] result _ _ = result
 generateDiagLists2' xs result row col =
                                             if row + 3 < length xs && col + 3 < length (xs !! row)
-                                                then [((xs !! (row + 3)) !! col) * ((xs !! (row + 2)) !! (col + 1)) * ((xs !! (row + 1)) !! (col+2)) * ((xs !! row) !! (col + 3))] ++ generateDiagLists2' xs result row (col + 1)
+                                                then (((xs !! (row + 3)) !! col) * ((xs !! (row + 2)) !! (col + 1)) * ((xs !! (row + 1)) !! (col+2)) * ((xs !! row) !! (col + 3))) : generateDiagLists2' xs result row (col + 1)
                                             else result

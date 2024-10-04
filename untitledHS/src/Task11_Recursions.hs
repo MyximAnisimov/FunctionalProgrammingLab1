@@ -11,7 +11,7 @@ findResult a b c d = max (max a b) (max c d)
     --Нахождение максимального результата в матрице
 findMaxMatrix :: [[Integer]] -> Integer
 findMaxMatrix []     = 0
-findMaxMatrix (x:xs) = max (findMaxRow x) (findMaxMatrix xs)
+findMaxMatrix xs = foldr (max . findMaxRow) 0 xs
 
     --Нахождение максимального результата в строчке
 findMaxRow :: [Integer] -> Integer
@@ -37,7 +37,7 @@ findDiagonalCol1 [] _ _ = 0
 findDiagonalCol1 xs row col =
                             if col + 3 < 20
                              then
-                                let product = (findMultipleEl (xs !! row) col) * (findMultipleEl (xs !! (row + 1)) (col + 1)) * (findMultipleEl (xs !! (row + 2)) (col + 2)) * (findMultipleEl (xs !! (row + 3)) (col + 3))
+                                let product = findMultipleEl (xs !! row) col * findMultipleEl (xs !! (row + 1)) (col + 1) * findMultipleEl (xs !! (row + 2)) (col + 2) * findMultipleEl (xs !! (row + 3)) (col + 3)
                                 in max product (findDiagonalCol1 xs row (col + 1))
                             else
                                 0
@@ -64,7 +64,7 @@ findDiagonalCol2 [] _ _ = 0
 findDiagonalCol2 xs row col =
                             if col + 3 < 20
                              then
-                                let product = (findMultipleEl (xs !! (row + 3)) col) * (findMultipleEl (xs !! (row + 2)) (col + 1)) * (findMultipleEl (xs !! (row + 1)) (col + 2)) * (findMultipleEl (xs !! row) (col + 3))
+                                let product = findMultipleEl (xs !! (row + 3)) col * findMultipleEl (xs !! (row + 2)) (col + 1) * findMultipleEl (xs !! (row + 1)) (col + 2) * findMultipleEl (xs !! row) (col + 3)
                                 in max product (findDiagonalCol2 xs row (col + 1))
                             else
                                 0

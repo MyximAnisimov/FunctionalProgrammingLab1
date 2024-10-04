@@ -4,10 +4,10 @@ module Task20_ModuleMakeCon(
  )
  where
 import           Data.Char
-    --Вычисление факториала при помощи свёртки
+    --Вычисление факториала
 calculateFactByConvolution :: [Integer] -> Integer
 calculateFactByConvolution [] = 0
-calculateFactByConvolution xs = foldl (*) 1 xs
+calculateFactByConvolution xs = product xs
 
     --Генерация последовательности символов
 generateSeqNums :: String -> Integer
