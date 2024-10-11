@@ -24,6 +24,7 @@ factorialTailFuncInner val 0 = val
 factorialTailFuncInner val index = factorialTailFuncInner (val * index) (index - 1)
 
 countTailFactSum :: String -> Integer
+countTailFactSum "" = 0
 countTailFactSum n = countSumInner n 0
 
 countSumInner :: String -> Integer -> Integer

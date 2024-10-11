@@ -42,7 +42,7 @@ main = do
     let result2 = findMaxMatrix anotherGrid
 
         --Нахождение максималнього значения проходм по правой нижней диагонали
-    let resultDiag = findDiagonalRow1 grid 0 0
+    let resultDiag = findDiagonalRow1 grid 0
 
         --Нахождение максимального значения проходом по праввой верхней диагонали
     let resultDiag2 = findDiagonalRow2 grid 0 0
