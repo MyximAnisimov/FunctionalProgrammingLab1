@@ -224,4 +224,3 @@ n! означает n × (n − 1) × ... × 3 × 2 × 1
             System.out.println(result);
         }
     }
-
